@@ -1,0 +1,35 @@
+DATA SEGMENT
+    SAYI1 DB 8
+    SAYI2 DB 8
+ENDS
+
+
+CODE SEGMENT
+    ASSUME DS:DATA CS.CODE
+START:
+    MOV AX,DATA
+    MOV DS,AX
+    MOV ES,AX
+    
+    MOV DL,00
+    MOV DL,SAYI1
+    ADD DL,SAYI2
+    
+    
+    MOV CL,00
+    MOV CL,SAYI1
+    SUB CL,SAYI2
+    
+    
+    MOV AX,00H
+    MOV AL,SAYI1
+    MOV BL,00
+    MOV BL,SAYI2
+    MUL BL
+    
+    MOV AX,00H
+    MOV AL,SAYI1
+    MOV BL,SAYI2
+    DIV BL
+ENDS
+END START
